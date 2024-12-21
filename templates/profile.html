@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+</head>
+<body>
+  <h1>This is the Profile Page</h1>
+  <p>Edit/Change your Profile</p>
+  <hr>
+  <hr>
+
+  {% for message in messages %}
+    {{message}}
+  {% endfor %}
+  
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+
+    <!--<p>Profile Image</p>
+    <img src="" alt="">
+    <input type="file" name="image">
+    <hr>
+    <p>Phone:</p>
+    <input type="number" name="phone" >
+    <hr>
+    <p>Email:</p>
+    <input type="email" name="email">
+    <hr>
+    <p>Bio:</p>
+    <textarea name="bio"></textarea>-->
+    {{form.as_p}}
+    <hr>
+    <input type="submit" value="Save">
+  </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create</title>
+</head>
+<body>
+  <h1>Create a Property</h1>
+
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!--<p>Title:</p>
+    <input type="text" name="title" required>
+    <hr>
+    <img src="{{listing.image.url}}" alt="">
+    <input type="file" name="image" required>
+    <hr>
+    <p>Area:</p>
+    <input type="number" name="area" required>
+    <hr>
+    <p>Price:</p>
+    <input type="number" name="price" required>
+    <hr>
+    <p>Bedroom:</p>
+    <input type="number" name="beds" required>
+    <hr>
+    <p>Bathrooms:</p>
+    <input type="number" name="baths" required>
+    <hr>
+
+    <p>Location:</p>
+    <input type="text" name="location" required>
+   <hr><hr><br>-->
+   {{form.as_p}}
+
+    <input type="submit" value="Create">
+  </form>
+</body>
+</html>
